@@ -1,0 +1,6 @@
+{"__REALTIME_TIMESTAMP":"1793523600000000","_HOSTNAME":"bastion","SYSLOG_IDENTIFIER":"sshd","MESSAGE":"Failed password for admin from 203.0.113.24 port 51000 ssh2"}
+{"__REALTIME_TIMESTAMP":"1793523610000000","_HOSTNAME":"bastion","SYSLOG_IDENTIFIER":"sshd","MESSAGE":"Failed password for admin from 203.0.113.24 port 51001 ssh2"}
+{"__REALTIME_TIMESTAMP":"1793523620000000","_HOSTNAME":"bastion","SYSLOG_IDENTIFIER":"sshd-session","MESSAGE":"Failed keyboard-interactive/pam for admin from 203.0.113.24 port 51002 ssh2"}
+{"__REALTIME_TIMESTAMP":"1793523630000000","_HOSTNAME":"bastion","SYSLOG_IDENTIFIER":"sshd-session","MESSAGE":"Failed password for admin from 203.0.113.24 port 51003 ssh2"}
+{"__REALTIME_TIMESTAMP":"1793523640000000","_HOSTNAME":"bastion","SYSLOG_IDENTIFIER":"sshd-session","MESSAGE":"Failed password for admin from 203.0.113.24 port 51004 ssh2"}
+{"__REALTIME_TIMESTAMP":"1793523650000000","_HOSTNAME":"bastion","SYSLOG_IDENTIFIER":"sshd-session","MESSAGE":"Accepted publickey for admin from 203.0.113.24 port 51005 ssh2: ED25519 SHA256:synthetic"}

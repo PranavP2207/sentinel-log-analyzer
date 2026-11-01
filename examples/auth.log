@@ -1,0 +1,16 @@
+Nov  1 09:00:00 bastion sshd[4100]: Failed password for admin from 203.0.113.24 port 51000 ssh2
+Nov  1 09:00:01 bastion sshd[4100]: pam_unix(sshd:auth): authentication failure; rhost=203.0.113.24 user=admin
+Nov  1 09:00:10 bastion sshd[4101]: Failed password for admin from 203.0.113.24 port 51001 ssh2
+Nov  1 09:00:20 bastion sshd[4102]: Failed password for admin from 203.0.113.24 port 51002 ssh2
+Nov  1 09:00:30 bastion sshd[4103]: Failed password for admin from 203.0.113.24 port 51003 ssh2
+Nov  1 09:00:40 bastion sshd[4104]: Failed password for admin from 203.0.113.24 port 51004 ssh2
+Nov  1 09:00:50 bastion sshd[4105]: Failed password for admin from 203.0.113.24 port 51005 ssh2
+Nov  1 09:01:00 bastion sshd[4106]: Accepted password for admin from 203.0.113.24 port 51006 ssh2
+Nov  1 09:02:00 bastion sshd[4200]: Failed password for invalid user root from 198.51.100.40 port 52000 ssh2
+Nov  1 09:02:10 bastion sshd[4201]: Failed password for invalid user test from 198.51.100.40 port 52001 ssh2
+Nov  1 09:02:20 bastion sshd[4202]: Failed password for invalid user deploy from 198.51.100.40 port 52002 ssh2
+Nov  1 09:03:00 bastion sshd[4300]: Failed password for bob from 192.0.2.10 port 53000 ssh2
+Nov  1 09:03:20 bastion sshd[4301]: Accepted publickey for bob from 192.0.2.10 port 53001 ssh2: ED25519 SHA256:synthetic
+Nov  1 09:04:00 bastion CRON[4400]: (root) CMD (test -x /usr/sbin/anacron)
+Nov  1 09:05:00 bastion sshd[4500]: Accepted publickey for carol from 192.0.2.11 port 54000 ssh2: ED25519 SHA256:synthetic
+Nov  1 09:06:00 bastion sshd[4500]: Disconnected from user carol 192.0.2.11 port 54000

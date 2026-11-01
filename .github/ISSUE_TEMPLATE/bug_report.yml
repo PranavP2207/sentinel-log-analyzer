@@ -1,0 +1,35 @@
+name: Bug report
+description: Report a reproducible parser, detection, or CLI problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Use synthetic or redacted logs. Report vulnerabilities privately through SECURITY.md."
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Sentinel version, Python version, and operating system.
+      placeholder: "Sentinel 0.1.0, Python 3.13, Ubuntu"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps and minimal example
+      description: Include the command and a small synthetic log sample. Remove all secrets and private data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include relevant sanitized output or error messages.
+    validations:
+      required: true

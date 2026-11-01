@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinel-log-analyzer"
+version = "0.1.0"
+description = "Offline SSH authentication log analysis with evidence-backed alerts"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Pranav Paradkar"}]
+keywords = ["security", "ssh", "logs", "linux", "authentication", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Security",
+    "Topic :: System :: Logging",
+]
+
+[project.urls]
+Homepage = "https://github.com/PranavP2207/sentinel-log-analyzer"
+Documentation = "https://github.com/PranavP2207/sentinel-log-analyzer/blob/main/docs/usage.md"
+Issues = "https://github.com/PranavP2207/sentinel-log-analyzer/issues"
+Releases = "https://github.com/PranavP2207/sentinel-log-analyzer/releases"
+Changelog = "https://github.com/PranavP2207/sentinel-log-analyzer/blob/main/CHANGELOG.md"
+
+[project.scripts]
+sentinel = "sentinel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sentinel*"]
