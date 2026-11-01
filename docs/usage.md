@@ -2,7 +2,7 @@
 
 An offline security log analyzer for Linux SSH authentication logs, built in Python. Sentinel highlights repeated failures, attempts across multiple usernames, and successful logins following failures. Every alert includes timestamps, the destination host, the source IP, targeted usernames, and source file/line evidence.
 
-**Status:** Initial CLI release. Python 3.10+; no runtime dependencies. Runs on Linux and also analyzes exported logs on Windows or macOS. Local verification so far uses Python 3.11 on Windows; Linux execution has not yet been verified.
+**Status:** Initial CLI release. Python 3.10+; no runtime dependencies. GitHub Actions passed on Ubuntu and Windows with Python 3.10 and 3.13, including the installed-command smoke test. macOS is not yet covered by CI.
 
 ## Try it
 
@@ -152,7 +152,7 @@ The JSON contract has `schema_version: 1`, a `status` (`ok`, `partial`, or `no_s
 python -m unittest discover -s tests -v
 ```
 
-Tests exercise parsing, exact timestamps, window boundaries, isolated hosts/accounts/IPs, evidence, clean logs, gzip, stdin, malformed records, exit codes, and output protection. A GitHub Actions workflow is provided for Python 3.10/3.13 on Ubuntu and Windows; it has not been run here.
+Tests exercise parsing, exact timestamps, window boundaries, isolated hosts/accounts/IPs, evidence, clean logs, gzip, stdin, malformed records, exit codes, and output protection. The [initial GitHub Actions run](https://github.com/PranavP2207/sentinel-log-analyzer/actions/runs/41292580916) passed on Python 3.10/3.13 on Ubuntu and Windows. All 36 tests, including the hard-link protection check, passed in the Ubuntu job.
 
 This version is a batch analyzer scoped to SSH. It does not detect general sudo, firewall, kernel, Windows Event Log, full RFC 5424 envelopes, binary journal files, or custom application formats. Unsupported lines are counted but not analyzed. It does not persist state between runs, tail live files, deduplicate overlapping exports, or send notifications.
 
