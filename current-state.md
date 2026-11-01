@@ -6,7 +6,7 @@ Last updated: 2026-11-01
 
 - Project: Sentinel — Security log analyzer.
 - Goal: Read system logs and highlight suspicious activity, such as repeated failed login attempts.
-- Stage: Initial CLI implemented, public repository pushed, and Ubuntu/Windows CI passed. First tagged release is being prepared.
+- Stage: Initial CLI, public GitHub repository, community documentation, and v0.1.0 release published and verified.
 - Requirements and constraints: See [instructions.md](instructions.md).
 
 ## Implemented and verified
@@ -22,7 +22,10 @@ Last updated: 2026-11-01
 - Offline wheel build succeeded with `python -m pip wheel . --no-deps --no-build-isolation --no-index --wheel-dir dist`, using TEMP/TMP inside `.build-tmp/` because the sandbox's default build-temp rename failed.
 - Installed the wheel into an isolated temporary target; verified import from that target, console entry point metadata, three expected demo alerts, and exit 1 with `--fail-on-alert`.
 - Cross-platform validation: All four jobs passed in [GitHub Actions run 41292580916](https://github.com/PranavP2207/sentinel-log-analyzer/actions/runs/41292580916), on Ubuntu/Windows with Python 3.10/3.13. The Ubuntu job passed all 36 tests with no skips and the installed CLI smoke test (I-001 and I-002 resolved).
-- Distribution: Public [GitHub repository](https://github.com/PranavP2207/sentinel-log-analyzer); v0.1.0 publication in progress.
+- Distribution: Public [GitHub repository](https://github.com/PranavP2207/sentinel-log-analyzer) with `main` tracking `origin/main`; [v0.1.0 release](https://github.com/PranavP2207/sentinel-log-analyzer/releases/tag/v0.1.0) published from tested commit `2ce1703a3b2b98d2616b2810954f84287e03aa9f`.
+- Final release-preparation CI [run 41292855580](https://github.com/PranavP2207/sentinel-log-analyzer/actions/runs/41292855580) passed all four Ubuntu/Windows Python 3.10/3.13 jobs with the current official action versions.
+- Release workflow [run 41292979163](https://github.com/PranavP2207/sentinel-log-analyzer/actions/runs/41292979163) passed on Ubuntu, verified version agreement, ran tests, built/installed the wheel, exercised the CLI, and published the release.
+- Published assets: `sentinel_log_analyzer-0.1.0-py3-none-any.whl`, `sentinel_log_analyzer-0.1.0.tar.gz`, and `SHA256SUMS`. Downloaded assets into `.build-tmp/published-v0.1.0/` and verified both package hashes against the published checksums.
 - Local wheel and source archive built with isolated build tooling in `.build-tmp/release-tools`; verified MIT SPDX metadata/license and inclusion of examples, tests, and documentation.
 - GitHub community profile reports 100% health; MIT licensing and private vulnerability reporting are enabled.
 
@@ -38,14 +41,14 @@ Last updated: 2026-11-01
 
 ## Work in progress
 
-- Initial implementation and community documentation are complete; first tagged release publication is in progress under D-006.
+- Initial implementation, community documentation, and repository/release publication under D-006 are complete. No active implementation work remains.
 - Prepared README, detailed usage guide, MIT license, contributor/conduct/security guides, changelog, issue/PR templates, release notes, package metadata, and a tag-triggered release workflow.
 - Limits: SSH only, batch/in-memory processing, no live monitoring or persistent state, and no deduplication of overlapping exports. See README for unsupported formats and yearless-log assumptions.
 
 ## Next action
 
-Push the verification notes and current official action versions, wait for their CI run, then publish v0.1.0 through the tagged release workflow and verify its assets.
+Collect feedback or analyze a representative non-overlapping log export when requested. For future releases, follow `docs/RELEASING.md`; keep metadata/package/tag versions aligned and add versioned release notes before pushing a tag.
 
 ## Latest checkpoint
 
-- Published the source and community files to GitHub, passed the first cross-platform CI run, and closed both initial verification gaps. Release publication remains in progress.
+- Published the public repository and v0.1.0, passed cross-platform and release checks, verified downloadable package checksums, and closed the initial Linux/hard-link verification gaps. GitHub reports 100% community-profile health; private vulnerability reporting is enabled.

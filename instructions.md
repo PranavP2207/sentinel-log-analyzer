@@ -14,6 +14,7 @@ Sentinel is a security log analyzer intended to read system logs and highlight s
 - Validation target selected by the agent: Exercise real parsing, time-window detection, and CLI behavior using synthetic fixtures, including clean input and malformed input.
 - Initial scope has been delivered; see [current-state.md](current-state.md) for observed checks and remaining platform-validation gaps.
 - Publication choices selected by the agent: Public `PranavP2207/sentinel-log-analyzer` repository, MIT licensing, community files, and a `v0.1.0` GitHub release with wheel/source/checksums. See D-006 in [decisions.md](decisions.md).
+- Publication request completed: Source pushed, community profile verified, release published, CI passed, and release-asset checksums verified. Future release procedure is documented in `docs/RELEASING.md`.
 
 ## Project constraints
 
